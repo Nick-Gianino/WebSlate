@@ -1,0 +1,42 @@
+.App {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+.TopBar{
+    height: 5vh; /* 15% of the viewport height */
+    background-color: #2f3132;
+}
+    .TopBar img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        left: 0;
+    }
+
+.SignIn{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+.BottomBar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2f3132; /* This is equivalent to bg-blue-500 in Tailwind */
+    padding: 1em;
+    height: 5vh;
+  }
+  
+  .BottomBar button {
+    width: 15vw;
+    height: 100%;
+    color: #fff;
+  }
+
+ 
