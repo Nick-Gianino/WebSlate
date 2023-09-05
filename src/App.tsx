@@ -9,9 +9,24 @@ import ContactUs from './components/ContactUs';
 import Services from './components/Services';
 import PreviousWork from './components/PreviousWork';
 import webslateLogo from './public/slatewebsitelogo3.png';
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 
 const App: React.FC = () => {
   const [selectedComponent, setSelectedComponent] = useState<number>(0);
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCW_zN-SgZhVUPNpLW7QQj-7m4oCPzuEUU",
+    authDomain: "webslate-13366.firebaseapp.com",
+    projectId: "webslate-13366",
+    storageBucket: "webslate-13366.appspot.com",
+    messagingSenderId: "911902414208",
+    appId: "1:911902414208:web:ee6988e0dcb5e2b5639d65",
+    measurementId: "G-85CG97H43N"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
 
   const selectComponent = (index: number) => {
     setSelectedComponent(index);
