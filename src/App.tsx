@@ -49,7 +49,7 @@ const App: React.FC = () => {
         {selectedComponent === 1 && <AboutUs />}
         {selectedComponent === 2 && <Services />}
         {selectedComponent === 3 && <ContactUs />}
-        {selectedComponent === 4 && < PreviousWork />}
+        {selectedComponent === 4 && <PreviousWork />}
       </div>
       
       <div className = "BottomBar">
