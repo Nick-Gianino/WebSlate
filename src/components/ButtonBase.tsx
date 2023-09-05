@@ -1,4 +1,4 @@
-import React, { CSSProperties, MouseEventHandler, ReactNode } from "react";
+import React, { MouseEventHandler, ReactNode } from "react";
 
 interface ButtonProps {
   className?: string;
