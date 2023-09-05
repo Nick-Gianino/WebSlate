@@ -5,7 +5,7 @@ import BottomBar from './components/BottomBar';
 import NonLoginHomePage from './components/NonLoginHomePage';
 import LoggedInHomePage from './components/LoggedInHomePage';
 import AboutUs from './components/AboutUs';
-import Pricing from './components/Pricing';
+import ContactUs from './components/ContactUs';
 import Services from './components/Services';
 import PreviousWork from './components/PreviousWork';
 import webslateLogo from './public/slatewebsitelogo3.png';
@@ -30,12 +30,12 @@ const App: React.FC = () => {
       </div>
 
       <div className = "Data">
-        {selectedComponent === 0 && <NonLoginHomePage />}
-        {selectedComponent === 1 && <LoggedInHomePage />}
-        {selectedComponent === 2 && <AboutUs />}
-        {selectedComponent === 3 && <Pricing />}
-        {selectedComponent === 4 && <Services  />}
-        {selectedComponent === 5 && <PreviousWork />}
+        
+        {selectedComponent === 0 && <LoggedInHomePage />}
+        {selectedComponent === 1 && <AboutUs />}
+        {selectedComponent === 2 && <Services />}
+        {selectedComponent === 3 && <ContactUs />}
+        {selectedComponent === 4 && < PreviousWork />}
       </div>
       
       <div className = "BottomBar">

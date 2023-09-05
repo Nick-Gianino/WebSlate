@@ -1,16 +1,29 @@
 import React from 'react';
+import ButtonBase from './ButtonBase';
 
 interface Props {
   selectComponent: (index: number) => void;
 }
 
 const BottomBar: React.FC<Props> = ({ selectComponent }) => {
+  const buttons = [
+    { name: 'Home', class: 'HomeButton' },
+    { name: 'About Us', class: 'AboutButton' },
+    { name: 'Services', class: 'ServicesButton' },
+    { name: 'Contact Us', class: 'ContactButton' },
+    { name: 'Previous Work', class: 'PreviousWorkButton' },
+  ];
+
   return (
-    <div className="fixed bottom-0 w-full flex justify-around items-center bg-blue-500 p-4 text-white">
-      {['Button1', 'Button2', 'Button3', 'Button4', 'Button5'].map((button, index) => (
-        <button key={index} onClick={() => selectComponent(index)}>
-          {button}
-        </button>
+    <div className="BottomBar">
+      {buttons.map((button, index) => (
+        <ButtonBase 
+          key={index}
+          className={button.class}
+          onClick={() => selectComponent(index)}
+        >
+          {button.name}
+        </ButtonBase>
       ))}
     </div>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+import ButtonBase from './ButtonBase';
 
 
 const TopBar: React.FC = () => {
@@ -9,9 +10,16 @@ const TopBar: React.FC = () => {
 
       </div>
 
-      <div className="SignIn">
-        <button>Sign In</button> 
-      </div>
+      
+      <ButtonBase 
+          className="LoginButton"
+          onClick={() => {
+          console.log("Sign in button clicked");  //firebase login goes here
+          }}
+      >
+        Sign in
+      </ButtonBase>
+    
 
     </div>
   );

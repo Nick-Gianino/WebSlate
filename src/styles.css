@@ -3,9 +3,12 @@
     width: 100vw;
     background-color: black;
 }
+html, body {
+  overflow: hidden; /* Hide scrollbars */
+}
 
 .TopBar{
-    height: 5vh; /* 15% of the viewport height */
+    height: 8vh; /* 15% of the viewport height */
     background-color: #2f3132;
 }
     .TopBar img {
@@ -15,28 +18,51 @@
         left: 0;
     }
 
-.SignIn{
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
+.LoginButton{
+  background: red;
+  color: white;
+  font-size: 32px;
+  border-radius: 5px;
+  width: 10vw; /* 10% of viewport width */
+  height: 8vh; /* 100% of viewport height */
+  position: absolute;
+  right: 0;
+}
+
+
   
 .BottomBar {
     position: fixed;
     bottom: 0;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: #2f3132; /* This is equivalent to bg-blue-500 in Tailwind */
     padding: 1em;
     height: 5vh;
   }
   
-  .BottomBar button {
-    width: 15vw;
-    height: 100%;
-    color: #fff;
+  .HomeButton{
+
+    width: 25vw;
+  }
+  .AboutButton{
+ 
+    width: 25vw;
+  }
+  .ServicesButton{
+    
+    width: 25vw;
+  }
+  .ContactButton {
+    
+    width: 25vw;
+  }
+  .PreviousWorkButton{
+    
+    width: 25vw;
   }
 
+  
  
