@@ -30,7 +30,6 @@ const App: React.FC = () => {
       </div>
 
       <div className = "Data">
-        
         {selectedComponent === 0 && <LoggedInHomePage />}
         {selectedComponent === 1 && <AboutUs />}
         {selectedComponent === 2 && <Services />}

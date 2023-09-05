@@ -5,6 +5,8 @@
 }
 html, body {
   overflow: hidden; /* Hide scrollbars */
+  margin: 0;
+  padding: 0;
 }
 
 .TopBar{
@@ -30,6 +32,10 @@ html, body {
 }
 
 
+/* .Data{
+
+} */
+
   
 .BottomBar {
     position: fixed;
@@ -44,23 +50,18 @@ html, body {
   }
   
   .HomeButton{
-
     width: 25vw;
   }
   .AboutButton{
- 
     width: 25vw;
   }
   .ServicesButton{
-    
     width: 25vw;
   }
   .ContactButton {
-    
     width: 25vw;
   }
   .PreviousWorkButton{
-    
     width: 25vw;
   }
 
