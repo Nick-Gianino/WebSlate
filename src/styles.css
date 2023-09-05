@@ -29,6 +29,7 @@ html, body {
   height: 8vh; /* 100% of viewport height */
   position: absolute;
   right: 0;
+  text-align: center;
 }
 
 
@@ -45,29 +46,63 @@ html, body {
     justify-content: space-between;
     align-items: center;
     background-color: #2f3132; /* This is equivalent to bg-blue-500 in Tailwind */
-    padding: 1em;
+    padding: 0;
+    margin: 0;
     height: 5vh;
   }
   
-  .HomeButton{
-    
-    width: 25vw;
-  }
-  .AboutButton{
  
-    width: 25vw;
+  
+
+  .HomeButton{
+    text-align: center;
+    box-shadow: 0 0 0 5px red;
+    transition: background-color 0.3s ease;
+    width: 20%;
+    height: 100%;
+  }.HomeButton:hover {
+    background-color: green;
   }
+
+  .AboutButton{
+    text-align: center;
+    box-shadow: 0 0 0 5px red;
+    transition: background-color 0.3s ease;
+    width: 20%;
+    height: 100%;
+  } .AboutButton:hover {
+    background-color: green;
+  }
+
+  
   .ServicesButton{
-    
-    width: 25vw;
+    text-align: center;
+    box-shadow: 0 0 0 5px red;
+    transition: background-color 0.3s ease;
+    width: 20%;
+    height: 100%;
+  } .ServicesButton:hover {
+    background-color: green;
   }
+
   .ContactButton {
-    
-    width: 25vw;
+    text-align: center;
+    box-shadow: 0 0 0 5px red;
+    transition: background-color 0.3s ease;
+    width: 20%;
+    height: 100%;
+  }.ContactButton:hover {
+    background-color: green;
   }
+
   .PreviousWorkButton{
-    
-    width: 25vw;
+    text-align: center;
+    box-shadow: 0 0 0 5px red;
+    transition: background-color 0.3s ease;
+    width: 20%;
+    height: 100%;
+  }.PreviousWorkButton:hover {
+    background-color: green;
   }
 
   
