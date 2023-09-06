@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400&family=Arimo:wght@400;500&family=Comfortaa:wght@300;400&family=Noto+Sans+Tamil:wght@300;400&family=Scada:ital,wght@1,700&family=Staatliches&family=Zen+Kaku+Gothic+New:wght@300;400;700&display=swap');
+
 .App {
     height: 100vh;
     width: 100vw;
@@ -20,18 +22,31 @@ html, body {
         left: 0;
     }
 
-.LoginButton{
-  background: red;
-  color: white;
-  font-size: 32px;
-  border-radius: 5px;
-  width: 10vw; /* 10% of viewport width */
-  height: 8vh; /* 100% of viewport height */
-  position: absolute;
-  right: 0;
-  text-align: center;
-}
-
+    .LoginButton {
+      font-family: 'Arimo', sans-serif;
+      display: flex;
+      color: white;
+      font-size: 26px;
+      width: auto; /* Let the button expand to fit its content */
+      height: 7vh; /* 100% of viewport height */
+      position: fixed;
+      right: 0;
+      align-items: center;
+      text-align: center;
+      padding: 0; /* Remove padding */
+      white-space: nowrap; /* Prevent text wrapping */
+      padding-right: 50px;
+    }
+    .LoginContent {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+    
+    .ImageContainer img {
+      margin-right: 10px;
+      transform: scale(0.05); /* Scale down the image to 10% of its original size */
+    }
 
 /* .Data{
 
@@ -48,15 +63,14 @@ html, body {
     background-color: #2f3132; /* This is equivalent to bg-blue-500 in Tailwind */
     padding: 0;
     margin: 0;
-    height: 5vh;
+    height: 7vh;
   }
   
  
   
 
-  .HomeButton{
+  /* .HomeButton{
     text-align: center;
-    box-shadow: 0 0 0 5px red;
     transition: background-color 0.3s ease;
     width: 20%;
     height: 100%;
@@ -66,7 +80,6 @@ html, body {
 
   .AboutButton{
     text-align: center;
-    box-shadow: 0 0 0 5px red;
     transition: background-color 0.3s ease;
     width: 20%;
     height: 100%;
@@ -77,7 +90,6 @@ html, body {
   
   .ServicesButton{
     text-align: center;
-    box-shadow: 0 0 0 5px red;
     transition: background-color 0.3s ease;
     width: 20%;
     height: 100%;
@@ -87,7 +99,6 @@ html, body {
 
   .ContactButton {
     text-align: center;
-    box-shadow: 0 0 0 5px red;
     transition: background-color 0.3s ease;
     width: 20%;
     height: 100%;
@@ -97,13 +108,69 @@ html, body {
 
   .PreviousWorkButton{
     text-align: center;
-    box-shadow: 0 0 0 5px red;
     transition: background-color 0.3s ease;
     width: 20%;
     height: 100%;
   }.PreviousWorkButton:hover {
     background-color: green;
+  } */
+
+  .HomeButton,
+  .AboutButton,
+  .ServicesButton,
+  .ContactButton,
+  .PreviousWorkButton {
+    text-align: center;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Add position: relative */
+  }
+  
+  .HomeButton img,
+  .AboutButton img,
+  .ServicesButton img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+  
+  .ContactButton img {
+    max-width: 30%;
+    max-height: 80%;
+  }
+  
+  .PreviousWorkButton img {
+    max-width: 80%;
+    max-height: 70%;
+  }
+  
+  .HomeButton::before,
+  .AboutButton::before,
+  .ServicesButton::before,
+  .ContactButton::before,
+  .PreviousWorkButton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #7d1215, #c8222a);
+    opacity: 0; /* Start with opacity 0 for the transition effect */
+    transition: opacity 0.1s ease;
+    z-index: -1; /* Place the pseudo-element behind the content */
+  }
+  
+  /* Add hover styles for the pseudo-element */
+  .HomeButton:hover::before,
+  .AboutButton:hover::before,
+  .ServicesButton:hover::before,
+  .ContactButton:hover::before,
+  .PreviousWorkButton:hover::before {
+    opacity: 1; /* On hover, change opacity to 1 */
+    transition: opacity 0.1s ease-out;
   }
 
   
- 

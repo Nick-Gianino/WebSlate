@@ -7,11 +7,11 @@ interface Props {
 
 const BottomBar: React.FC<Props> = ({ selectComponent }) => {
   const buttons = [
-    { name: 'Home', class: 'HomeButton' },
-    { name: 'About Us', class: 'AboutButton' },
-    { name: 'Services', class: 'ServicesButton' },
-    { name: 'Contact Us', class: 'ContactButton' },
-    { name: 'Previous Work', class: 'PreviousWorkButton' },
+    { name: 'Home', imageSrc: '/home_nobg.png', class: 'HomeButton' },
+    { name: 'About Us', imageSrc: '/info_nobg.png', class: 'AboutButton' },
+    { name: 'Services', imageSrc: '/gears_nobg.png', class: 'ServicesButton' },
+    { name: 'Contact Us', imageSrc: '/email_nobg.png', class: 'ContactButton' },
+    { name: 'Previous Work', imageSrc: '/prevwork_nobg.png', class: 'PreviousWorkButton' },
   ];
 
   return (
@@ -22,7 +22,7 @@ const BottomBar: React.FC<Props> = ({ selectComponent }) => {
           className={button.class}
           onClick={() => selectComponent(index)}
         >
-          {button.name}
+          <img src={button.imageSrc} alt={button.name} />
         </ButtonBase>
       ))}
     </div>

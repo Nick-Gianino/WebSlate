@@ -37,7 +37,7 @@ const App: React.FC = () => {
 
       <div className="TopBar">
         <TopBar />
-        <img src={webslateLogo} alt="WebSlateLogo" />
+        <a href="app.tsx"><img src={webslateLogo} alt="WebSlateLogo" /></a>
 
         <div className="logo">
           
