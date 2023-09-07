@@ -54,20 +54,24 @@ html, body {
 
   
 .BottomBar {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #2f3132; /* This is equivalent to bg-blue-500 in Tailwind */
-    padding: 0;
-    margin: 0;
-    height: 7vh;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2f3132;
+  padding: 0;
+  margin: 0;
+  height: 7vh;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out; /* Add a smooth transition for height */
+}
+
+
+  .BottomBar .BottomBarButton:last-child {
+    border-right: none;
   }
-  
- 
-  
 
   /* .HomeButton{
     text-align: center;
@@ -127,8 +131,23 @@ html, body {
     align-items: center;
     justify-content: center;
     position: relative; /* Add position: relative */
+    border-left: 1px solid #ccc; /* Add left border */
+    border-right: 1px solid #ccc; /* Add right border */
   }
   
+  
+  .HomeButton:first-child,
+  .PreviousWorkButton:last-child {
+    border-left: none;
+    border-right: 1px solid #ccc; /* Add right border only for the last button */
+  }
+
+.PreviousWorkButton:first-child,
+.HomeButton:last-child {
+  border-right: none;
+  border-left: 1px solid #ccc; /* Add left border only for the first button */
+}
+
   .HomeButton img,
   .AboutButton img,
   .ServicesButton img {

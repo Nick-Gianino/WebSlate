@@ -19,7 +19,7 @@ const BottomBar: React.FC<Props> = ({ selectComponent }) => {
       {buttons.map((button, index) => (
         <ButtonBase 
           key={index}
-          className={button.class}
+          className={`BottomBarButton ${button.class} ${index === buttons.length - 1 ? 'LastButton' : ''}`}
           onClick={() => selectComponent(index)}
         >
           <img src={button.imageSrc} alt={button.name} />
