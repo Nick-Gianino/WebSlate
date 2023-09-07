@@ -69,9 +69,17 @@ html, body {
 }
 
 
-  .BottomBar .BottomBarButton:last-child {
-    border-right: none;
-  }
+.BottomBar .BottomBarButton:last-child {
+  border-right: 1px solid #18191a;
+}
+
+.BottomBar .HomeButton:last-child,
+.BottomBar .AboutButton:last-child,
+.BottomBar .ServicesButton:last-child,
+.BottomBar .ContactButton:last-child,
+.BottomBar .PreviousWorkButton:last-child {
+  border-right: 1px solid #18191a;
+}
 
   /* .HomeButton{
     text-align: center;
@@ -131,21 +139,23 @@ html, body {
     align-items: center;
     justify-content: center;
     position: relative; /* Add position: relative */
-    border-left: 1px solid #ccc; /* Add left border */
-    border-right: 1px solid #ccc; /* Add right border */
+    border-left: 1px solid #18191a; /* Add left border */
+    border-right: 1px solid #18191a; /* Add right border */
   }
   
   
-  .HomeButton:first-child,
-  .PreviousWorkButton:last-child {
+  .HomeButton:first-child {
     border-left: none;
-    border-right: 1px solid #ccc; /* Add right border only for the last button */
+  }
+  
+  .PreviousWorkButton:last-child {
+    border-right: none;
   }
 
 .PreviousWorkButton:first-child,
 .HomeButton:last-child {
   border-right: none;
-  border-left: 1px solid #ccc; /* Add left border only for the first button */
+  border-left: 1px solid #18191a; /* Add left border only for the first button */
 }
 
   .HomeButton img,
