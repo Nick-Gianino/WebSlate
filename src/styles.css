@@ -38,30 +38,42 @@ html, body {
   max-width: 100%;
   max-height: 8vh; /* 15% of the viewport height */
   margin: 0;
+  padding-left: 4%;
+  padding-top: 0%;
+  padding-bottom: 1%;
+  padding-right: 4%;
 }
 
 .centerarea {
-  flex: 1 0 60%; /* Flex-grow, flex-shrink, flex-basis */
+  flex: 1 0 0%; /* Flex-grow, flex-shrink, flex-basis */
   display: flex;
   justify-content: center;
   align-items: center; /* Center the text vertically */
   text-align: center; /* Center the text horizontally */
   overflow: hidden;
 }
+.LoginButton {
+  /* flex: 0 0 15%; */
+  overflow: hidden;
+  text-align: right;
+  justify-content: center;
+  margin: 0 auto;
+  border-left: 1.5px solid #18191a;
+}
 
-  .LoginButton{
-    flex: 0 0 15%; /* Flex-grow, flex-shrink, flex-basis */
-    overflow: hidden;
-    text-align: right;
-    justify-content: center;
-  } 
-    .LoginButton img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-        margin-right: 10px;
-        transform: scale(1);
-      }
+.LoginButton img {
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
+  /* margin-right: 10px; */
+  transform: scale(1);
+  padding-top: 11%;
+  padding-bottom: 6%;
+  padding-right: 16%;
+  padding-left: 8%;
+  
+  
+}
   
 
 
