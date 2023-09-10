@@ -5,9 +5,6 @@ import '../../styles.css';
 const LoginButton: React.FC = () => {
   return (
         <>
-
-            
-            
         <ButtonBase
             className="LoginButton"
             onClick={() => {
@@ -15,13 +12,8 @@ const LoginButton: React.FC = () => {
             }}
         >
             <img
-            src="signin_nobg.png"
+            src="signin_nobg_text.png"
             alt="sign in icon"
-            style={{
-                marginRight: "1px",
-                justifyContent: 'center',
-                transform: "scale(0.4)",
-            }}
             />
 
         </ButtonBase>
