@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import './styles.css';
-import TopBar from './components/TopBar';
+import TopBar from './components/TopBar/TopBar';
 import BottomBar from './components/BottomBar';
-import NonLoginHomePage from './components/NonLoginHomePage';
 import LoggedInHomePage from './components/LoggedInHomePage';
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 import Services from './components/Services';
 import PreviousWork from './components/PreviousWork';
-import webslateLogo from './public/slatewebsitelogo3.png';
+
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
@@ -32,17 +31,12 @@ const App: React.FC = () => {
     setSelectedComponent(index);
   };
 
+
   return (
     <div className="App">
-
-      <div className="TopBar">
         <TopBar />
-        <a href="app.tsx"><img src={webslateLogo} alt="WebSlateLogo" /></a>
+     
 
-        <div className="logo">
-          
-        </div>
-      </div>
 
       <div className = "Data">
         {selectedComponent === 0 && <LoggedInHomePage />}

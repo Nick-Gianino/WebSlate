@@ -4,6 +4,7 @@
     height: 100vh;
     width: 100vw;
     background-color: black;
+    overflow: hidden;
 }
 html, body {
   overflow: hidden; /* Hide scrollbars */
@@ -12,48 +13,80 @@ html, body {
 }
 
 .TopBar{
-    height: 8vh; /* 15% of the viewport height */
-    background-color: #2f3132;
+  height: 8vh; /* 15% of the viewport height */
+  display: flex;
+  justify-content: space-between;
+  background-color: #2f3132;
+  user-select: none;
+} 
+.logo{
+ width: 17%;
+ height: 100%;
+ overflow: hidden;
+} .logo img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
-    .TopBar img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        left: 0;
-    }
 
-    .LoginButton {
-      font-family: 'Arimo', sans-serif;
-      display: flex;
-      color: white;
-      font-size: 26px;
-      width: auto; /* Let the button expand to fit its content */
-      height: 7vh; /* 100% of viewport height */
-      position: fixed;
-      right: 0;
-      align-items: center;
-      text-align: center;
-      padding: 0; /* Remove padding */
-      white-space: nowrap; /* Prevent text wrapping */
-      padding-right: 50px;
-    }
-    .LoginContent {
-      display: flex;
-      align-items: center;
-      white-space: nowrap;
-    }
-    
-    .ImageContainer img {
-      margin-right: 10px;
-      transform: scale(0.05); /* Scale down the image to 10% of its original size */
-    }
+.centerarea {
+  flex-grow: 1;
+  text-align:  center;
+  justify-content: center;
+}
 
-/* .Data{
+.LoginButton{
+    font-family: 'Arimo', sans-serif;
+    color: white;
+    font-size: 26px;
+    width: 17%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0; 
+    white-space: nowrap; 
+    overflow: hidden;
+    right: 0;
+    }
+      .LoginButton img {
+        max-width: 100%;
+        max-height: 100%;
+        margin-right: 10px;
+        transform: scale(0.05); /* Scale down the image to 10% of its original size */
+      }
+  
 
-} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Data{
+  height: calc(100vh-8vh);
+}
 
   
+
+
+
+
+
+
+
+
+
 .BottomBar {
+  user-select: none;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -63,7 +96,7 @@ html, body {
   background-color: #2f3132;
   padding: 0;
   margin: 0;
-  height: 7vh;
+  height: 5%;
   overflow: hidden;
   transition: height 0.3s ease-in-out; /* Add a smooth transition for height */
 }
@@ -81,53 +114,7 @@ html, body {
   border-right: 1px solid #18191a;
 }
 
-  /* .HomeButton{
-    text-align: center;
-    transition: background-color 0.3s ease;
-    width: 20%;
-    height: 100%;
-  }.HomeButton:hover {
-    background-color: green;
-  }
-
-  .AboutButton{
-    text-align: center;
-    transition: background-color 0.3s ease;
-    width: 20%;
-    height: 100%;
-  } .AboutButton:hover {
-    background-color: green;
-  }
-
-  
-  .ServicesButton{
-    text-align: center;
-    transition: background-color 0.3s ease;
-    width: 20%;
-    height: 100%;
-  } .ServicesButton:hover {
-    background-color: green;
-  }
-
-  .ContactButton {
-    text-align: center;
-    transition: background-color 0.3s ease;
-    width: 20%;
-    height: 100%;
-  }.ContactButton:hover {
-    background-color: green;
-  }
-
-  .PreviousWorkButton{
-    text-align: center;
-    transition: background-color 0.3s ease;
-    width: 20%;
-    height: 100%;
-  }.PreviousWorkButton:hover {
-    background-color: green;
-  } */
-
-  .HomeButton,
+.HomeButton,
   .AboutButton,
   .ServicesButton,
   .ContactButton,
@@ -139,6 +126,7 @@ html, body {
     align-items: center;
     justify-content: center;
     position: relative; /* Add position: relative */
+    overflow: hidden;
     border-left: 1px solid #18191a; /* Add left border */
     border-right: 1px solid #18191a; /* Add right border */
   }
@@ -150,7 +138,7 @@ html, body {
   
   .PreviousWorkButton:last-child {
     border-right: none;
-  }
+  }  
 
 .PreviousWorkButton:first-child,
 .HomeButton:last-child {
@@ -161,16 +149,19 @@ html, body {
   .HomeButton img,
   .AboutButton img,
   .ServicesButton img {
+    overflow: hidden;
     max-width: 80%;
     max-height: 80%;
   }
   
   .ContactButton img {
+    overflow: hidden;
     max-width: 30%;
     max-height: 80%;
   }
   
   .PreviousWorkButton img {
+    overflow: hidden;
     max-width: 80%;
     max-height: 70%;
   }
@@ -181,6 +172,7 @@ html, body {
   .ContactButton::before,
   .PreviousWorkButton::before {
     content: "";
+    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
@@ -198,6 +190,7 @@ html, body {
   .ServicesButton:hover::before,
   .ContactButton:hover::before,
   .PreviousWorkButton:hover::before {
+    overflow: hidden;
     opacity: 1; /* On hover, change opacity to 1 */
     transition: opacity 0.1s ease-out;
   }
