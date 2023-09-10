@@ -13,6 +13,7 @@ import { getAnalytics } from "firebase/analytics";
 
 const App: React.FC = () => {
   const [selectedComponent, setSelectedComponent] = useState<number>(0);
+  const [selectedButton, setSelectedButton] = useState<number>(0);
 
   const firebaseConfig = {
     apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -29,8 +30,8 @@ const App: React.FC = () => {
 
   const selectComponent = (index: number) => {
     setSelectedComponent(index);
+    setSelectedButton(index);
   };
-
 
   return (
     <div className="App">
@@ -47,7 +48,7 @@ const App: React.FC = () => {
       </div>
       
       <div className = "BottomBar">
-        <BottomBar selectComponent={selectComponent} />
+      <BottomBar selectComponent={selectComponent} selectedButton={selectedButton} />
       </div>
       
     </div>
