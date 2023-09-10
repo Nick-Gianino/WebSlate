@@ -35,10 +35,9 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-        <TopBar />
+
+      <TopBar setSelectedComponent={setSelectedComponent} setSelectedButton={setSelectedButton} />
      
-
-
       <div className = "Data">
         {selectedComponent === 0 && <LoggedInHomePage />}
         {selectedComponent === 1 && <AboutUs />}

@@ -2,17 +2,25 @@ import React from 'react';
 import webslateLogo from '../../public/slatewebsitelogo3.png';
 import '../../styles.css';
 
-const Logo: React.FC = () => {
+interface LogoProps {
+  setSelectedComponent: React.Dispatch<React.SetStateAction<number>>;
+  setSelectedButton: React.Dispatch<React.SetStateAction<number>>;
+}
+
+const Logo: React.FC<LogoProps> = ({ setSelectedComponent, setSelectedButton }) => {
+
+  const handleLogoClick = () => {
+    setSelectedComponent(0); // This will show the LoggedInHomePage
+    setSelectedButton(0);
+  };
+
   return (
-    <>
-        <div className='logo'>
-            <a href="app.tsx">
-                <img src={webslateLogo} alt="WebSlateLogo"
-                 width="200px"
-                 height="200px"/>
-            </a>
-        </div>
-    </>
+    <div className='logo'>
+        <img src={webslateLogo} alt="WebSlateLogo"
+          onClick={handleLogoClick}
+          width="200px"
+          height="200px"/> 
+    </div>
   );
 };
 
