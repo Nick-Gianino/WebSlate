@@ -14,6 +14,8 @@ const LoginButton: React.FC = () => {
             <img
             src="signin_nobg_text.png"
             alt="sign in icon"
+            width="100px"
+            height="100px"
             />
 
         </ButtonBase>

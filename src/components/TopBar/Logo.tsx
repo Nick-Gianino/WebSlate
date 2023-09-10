@@ -7,7 +7,9 @@ const Logo: React.FC = () => {
     <>
         <div className='logo'>
             <a href="app.tsx">
-                <img src={webslateLogo} alt="WebSlateLogo"/>
+                <img src={webslateLogo} alt="WebSlateLogo"
+                 width="200px"
+                 height="200px"/>
             </a>
         </div>
     </>

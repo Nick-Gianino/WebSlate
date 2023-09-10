@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ButtonBase from './ButtonBase';
 
 interface Props {
@@ -6,21 +6,33 @@ interface Props {
 }
 
 const BottomBar: React.FC<Props> = ({ selectComponent }) => {
+  const [selectedButton, setSelectedButton] = useState<number | null>(null);
+
   const buttons = [
     { name: 'Home', imageSrc: '/home_nobg.png', class: 'HomeButton' },
     { name: 'About Us', imageSrc: '/info_nobg.png', class: 'AboutButton' },
-    { name: 'Services', imageSrc: '/gears_nobg.png', class: 'ServicesButton' },
+    { name: 'Services', imageSrc: '/gears_nobg2.png', class: 'ServicesButton' },
     { name: 'Contact Us', imageSrc: '/email_nobg.png', class: 'ContactButton' },
     { name: 'Previous Work', imageSrc: '/prevwork_nobg.png', class: 'PreviousWorkButton' },
   ];
+
+  const handleButtonClick = (index: number) => {
+    // Toggle the selected button
+    if (selectedButton === index) {
+      setSelectedButton(null);
+    } else {
+      setSelectedButton(index);
+    }
+    selectComponent(index);
+  };
 
   return (
     <div className="BottomBar">
       {buttons.map((button, index) => (
         <ButtonBase 
           key={index}
-          className={`BottomBarButton ${button.class} ${index === buttons.length - 1 ? 'LastButton' : ''}`}
-          onClick={() => selectComponent(index)}
+          className={`BottomBarButton ${button.class} ${index === buttons.length - 1 ? 'LastButton' : ''} ${selectedButton === index ? 'selected' : ''}`}
+          onClick={() => handleButtonClick(index)}
         >
           <img src={button.imageSrc} alt={button.name} />
         </ButtonBase>
