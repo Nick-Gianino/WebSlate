@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400&family=Arimo:wght@400;500&family=Comfortaa:wght@300;400&family=Noto+Sans+Tamil:wght@300;400&family=Scada:ital,wght@1,700&family=Staatliches&family=Zen+Kaku+Gothic+New:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400&family=Arimo:wght@400;500&family=Comfortaa:wght@300;400&family=Frank+Ruhl+Libre&family=Noto+Sans+Tamil:wght@300;400&family=Scada:ital,wght@1,700&family=Staatliches&family=Zen+Kaku+Gothic+New:wght@300;400;700&display=swap');
 
 .App {
     height: 100vh;
@@ -218,4 +218,36 @@ html, body {
     background-image: linear-gradient(to top, #920f14, #db1721); /* Customize the background color for the selected state */
     /* Add any other styles you want for the selected button here */
   }
-  
+.container {
+    display: flex;
+    height: 85vh; /* 100% of the viewport height */
+    justify-content: space-between;
+}
+
+.box {
+    flex: 1;
+    padding-top: 10px;
+    padding-left: 10px;
+    border: 2px solid transparent;
+    border-color: #52080a;
+    margin: 20px;
+    background: linear-gradient(to top, rgba(47, 49, 50, 0.8), rgba(47, 49, 50, 0.2));
+    transition: border-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+    font-family: 'Comfortaa', cursive;
+    font-size: 40px;
+    color: azure;
+    opacity: 0.7;
+}
+
+.box:hover {
+    border-color: #920f14;
+    opacity: 1;
+    transform: scale(1.03);
+    background: linear-gradient(to top, rgba(47, 49, 50, 1), rgba(47, 49, 50, 0.4)); /* Adjust gradient on hover */
+}
+
+.box img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+}

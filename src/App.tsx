@@ -7,7 +7,6 @@ import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 import Services from './components/Services';
 import PreviousWork from './components/PreviousWork';
-
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
@@ -26,7 +25,7 @@ const App: React.FC = () => {
   };
 
   const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+  // const analytics = getAnalytics(app);
 
   const selectComponent = (index: number) => {
     setSelectedComponent(index);
@@ -37,7 +36,7 @@ const App: React.FC = () => {
     <div className="App">
 
       <TopBar setSelectedComponent={setSelectedComponent} setSelectedButton={setSelectedButton} />
-     
+
       <div className = "Data">
         {selectedComponent === 0 && <LoggedInHomePage />}
         {selectedComponent === 1 && <AboutUs />}
@@ -45,11 +44,11 @@ const App: React.FC = () => {
         {selectedComponent === 3 && <ContactUs />}
         {selectedComponent === 4 && <PreviousWork />}
       </div>
-      
+
       <div className = "BottomBar">
       <BottomBar selectComponent={selectComponent} selectedButton={selectedButton} />
       </div>
-      
+
     </div>
   );
 };
