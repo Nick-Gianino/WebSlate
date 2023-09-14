@@ -14,7 +14,7 @@ const CenterArea: React.FC = () => {
   }, [auth]);
 
   return (
-    <div className='centerarea' style={{ backgroundColor: user ? '#920f14' : 'initial' }} >
+    <div className='centerarea'  >
         {user ? <p>Hello, {user.displayName}</p> : <p>Please Sign in</p>}
     </div>
   );

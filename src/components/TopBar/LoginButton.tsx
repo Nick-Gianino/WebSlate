@@ -50,7 +50,7 @@ const LoginButton: React.FC<LogoProps> = ({ setSelectedComponent, setSelectedBut
         onClick={handleSignOut}
       >
         <img
-          src="signin_nobg_textv2.png" // Replace with your logout icon
+          src="signout_nobg_text.png" // Replace with your logout icon
           alt="logout icon"
         />
       </ButtonBase>
