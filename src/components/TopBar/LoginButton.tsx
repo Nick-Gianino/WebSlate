@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ButtonBase from '../ButtonBase';
 import '../../styles.css';
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, User, signOut, onAuthStateChanged } from "firebase/auth";
 
 interface LogoProps {
   setSelectedComponent: React.Dispatch<React.SetStateAction<number>>;
@@ -9,6 +9,7 @@ interface LogoProps {
 }
 
 const LoginButton: React.FC<LogoProps> = ({ setSelectedComponent, setSelectedButton }) => {
+  const [user, setUser] = useState<User | null>(null);
   const provider = new GoogleAuthProvider();
   const auth = getAuth();
 
@@ -25,18 +26,46 @@ const LoginButton: React.FC<LogoProps> = ({ setSelectedComponent, setSelectedBut
     }
 };
 
+    const handleSignOut = () => {
+      signOut(auth).then(() => {
+        console.log("User signed out");
+      }).catch((error) => {
+        console.error("Error signing out: ", error);
+      });
+    };
+
+    useEffect(() => {
+      const unsubscribe = onAuthStateChanged(auth, user => {
+        setUser(user);
+      });
+
+      return () => unsubscribe();
+    }, [auth]);
+
   return (
-        <>
-          <ButtonBase
-            className="LoginButton"
-            onClick={signInWithGoogle}
-            >
-            <img
-                src="signin_nobg_text.png"
-                alt="sign in icon"
-            />
-          </ButtonBase>
-      </>
+    <>
+    {user ? (
+      <ButtonBase
+        className="LogoutButton"
+        onClick={handleSignOut}
+      >
+        <img
+          src="signin_nobg_textv2.png" // Replace with your logout icon
+          alt="logout icon"
+        />
+      </ButtonBase>
+    ) : (
+      <ButtonBase
+        className="LoginButton"
+        onClick={signInWithGoogle}
+      >
+        <img
+          src="signin_nobg_text.png"
+          alt="sign in icon"
+        />
+      </ButtonBase>
+    )}
+  </>
   );
 };
 

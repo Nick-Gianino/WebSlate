@@ -53,7 +53,6 @@ html, body {
   overflow: hidden;
 }
 .LoginButton {
-  /* flex: 0 0 15%; */
   overflow: hidden;
   text-align: right;
   justify-content: center;
@@ -61,11 +60,29 @@ html, body {
   border-left: 1.5px solid #18191a;
   background-image: linear-gradient(to top, #7d1215, #c8222a);
  
-
-  
 }
 
 .LoginButton img {
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
+  transform: scale(1);
+  padding-top: 11%;
+  padding-bottom: 6%;
+  padding-right: 16%;
+  padding-left: 8%;
+  
+  
+}
+
+.LogoutButton {
+  overflow: hidden;
+  text-align: right;
+  justify-content: center;
+  margin: 0 auto;
+  border-left: 1.5px solid #18191a;
+}
+.LogoutButton img {
   max-width: 70%;
   max-height: 70%;
   object-fit: contain;

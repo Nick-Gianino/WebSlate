@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles.css';
 import TopBar from './components/TopBar/TopBar';
 import BottomBar from './components/BottomBar';
@@ -10,10 +10,13 @@ import PreviousWork from './components/PreviousWork';
 import UserDashboard from './components/UserDashboard';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { User, getAuth, onAuthStateChanged } from 'firebase/auth';
+
 
 const App: React.FC = () => {
   const [selectedComponent, setSelectedComponent] = useState<number>(0);
   const [selectedButton, setSelectedButton] = useState<number>(0);
+  const [user, setUser] = useState<User | null>(null);
 
   const firebaseConfig = {
     apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -28,6 +31,19 @@ const App: React.FC = () => {
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
 
+  const auth = getAuth();
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, user => {
+      setUser(user);
+      if(user) {
+        setSelectedComponent(5);
+        setSelectedButton(5);
+      }
+    });
+
+    return () => unsubscribe();
+  }, [auth]);
   const selectComponent = (index: number) => {
     setSelectedComponent(index);
     setSelectedButton(index);
@@ -39,7 +55,7 @@ const App: React.FC = () => {
       <TopBar setSelectedComponent={setSelectedComponent} setSelectedButton={setSelectedButton} />
 
       <div className = "Data">
-        {selectedComponent === 0 && <Homepage />}
+        {selectedComponent === 0 && (user ? <UserDashboard /> : <Homepage />)}
         {selectedComponent === 1 && <AboutUs />}
         {selectedComponent === 2 && <Services />}
         {selectedComponent === 3 && <ContactUs />}
