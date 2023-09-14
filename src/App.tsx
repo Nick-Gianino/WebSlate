@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import './styles.css';
 import TopBar from './components/TopBar/TopBar';
 import BottomBar from './components/BottomBar';
-import LoggedInHomePage from './components/LoggedInHomePage';
+import Homepage from './components/Homepage';
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 import Services from './components/Services';
 import PreviousWork from './components/PreviousWork';
+import UserDashboard from './components/UserDashboard';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
@@ -25,7 +26,7 @@ const App: React.FC = () => {
   };
 
   const app = initializeApp(firebaseConfig);
-  // const analytics = getAnalytics(app);
+  const analytics = getAnalytics(app);
 
   const selectComponent = (index: number) => {
     setSelectedComponent(index);
@@ -38,11 +39,12 @@ const App: React.FC = () => {
       <TopBar setSelectedComponent={setSelectedComponent} setSelectedButton={setSelectedButton} />
 
       <div className = "Data">
-        {selectedComponent === 0 && <LoggedInHomePage />}
+        {selectedComponent === 0 && <Homepage />}
         {selectedComponent === 1 && <AboutUs />}
         {selectedComponent === 2 && <Services />}
         {selectedComponent === 3 && <ContactUs />}
         {selectedComponent === 4 && <PreviousWork />}
+        {selectedComponent === 5 && <UserDashboard />}
       </div>
 
       <div className = "BottomBar">

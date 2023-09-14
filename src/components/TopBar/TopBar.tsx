@@ -14,7 +14,7 @@ const TopBar: React.FC<TopBarProps> = ({ setSelectedComponent, setSelectedButton
     <div className = 'TopBar'>
         <Logo setSelectedComponent={setSelectedComponent} setSelectedButton={setSelectedButton} />
         <CenterArea />
-        <LoginButton />
+        <LoginButton setSelectedComponent={setSelectedComponent} setSelectedButton={setSelectedButton} />
     </div>
   );
 };
