@@ -9,8 +9,10 @@ import Services from './components/Services';
 import PreviousWork from './components/PreviousWork';
 import UserDashboard from './components/UserDashboard';
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { getAnalytics } from 'firebase/analytics';
 import { User, getAuth, onAuthStateChanged } from 'firebase/auth';
+import { auth } from '../firebase'; // Assuming you have auth exported from your firebase.js file
+import 'firebase/auth';
 
 
 const App: React.FC = () => {
@@ -27,9 +29,8 @@ const App: React.FC = () => {
     appId: process.env.REACT_APP_FIREBASE_APP_ID,
     measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
   };
-
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+  initializeApp(firebaseConfig);
+  // const analytics = getAnalytics(app);
 
   const auth = getAuth();
 
