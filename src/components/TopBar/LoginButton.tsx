@@ -38,7 +38,8 @@ const LoginButton: React.FC<LogoProps> = ({ setSelectedComponent, setSelectedBut
       const unsubscribe = onAuthStateChanged(auth, user => {
         setUser(user);
       });
-
+      
+      // window.self.close()
       return () => unsubscribe();
     }, [auth]);
 
