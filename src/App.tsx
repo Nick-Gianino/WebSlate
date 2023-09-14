@@ -11,7 +11,6 @@ import UserDashboard from './components/UserDashboard';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from 'firebase/analytics';
 import { User, getAuth, onAuthStateChanged } from 'firebase/auth';
-import { auth } from '../firebase'; // Assuming you have auth exported from your firebase.js file
 import 'firebase/auth';
 
 
