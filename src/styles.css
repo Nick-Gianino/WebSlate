@@ -1,30 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400&family=Arimo:wght@400;500&family=Comfortaa:wght@300;400&family=Frank+Ruhl+Libre&family=Noto+Sans+Tamil:wght@300;400&family=Scada:ital,wght@1,700&family=Staatliches&family=Zen+Kaku+Gothic+New:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400&family=Arimo:wght@400;500&family=Comfortaa:wght@300;400&family=Frank+Ruhl+Libre&family=Noto+Sans+Tamil:wght@300;400&family=Scada:ital,wght@1,700&family=Staatliches&family=Zen+Kaku+Gothic+New:wght@300;400;700&display=swap");
 
 .App {
-    height: 100vh;
-    width: 100vw;
-    background-color: black;
-    overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  overflow: hidden;
 }
-html, body {
+html,
+body {
   overflow: hidden; /* Hide scrollbars */
   margin: 0;
   padding: 0;
 }
 
-
-.TopBar{
+.TopBar {
   height: 8vh; /* 15% of the viewport height */
   display: flex;
   justify-content: space-between;
   background-color: #2f3132;
   user-select: none;
-  
-} 
-.logo{
+}
+.logo {
   flex: 0 0 8%; /* Flex-grow, flex-shrink, flex-basis */
   overflow: hidden;
-} 
+}
 .logo:hover {
   cursor: pointer;
 }
@@ -60,7 +59,6 @@ html, body {
   margin: 0 auto;
   border-left: 1.5px solid #18191a;
   background-image: linear-gradient(to top, #7d1215, #c8222a);
- 
 }
 
 .LoginButton img {
@@ -72,8 +70,6 @@ html, body {
   padding-bottom: 6%;
   padding-right: 16%;
   padding-left: 8%;
-  
-  
 }
 
 .LogoutButton {
@@ -84,7 +80,6 @@ html, body {
   margin: 0 auto;
   border-left: 1.5px solid #18191a;
   background-image: linear-gradient(to top, #7d1215, #c8222a);
- 
 }
 .LogoutButton img {
   max-width: 70%;
@@ -95,36 +90,11 @@ html, body {
   padding-bottom: 6%;
   padding-right: 16%;
   padding-left: 8%;
-  
-  
 }
-  
 
-
-
-
-
-
-
-
-
-
-
-
-
-.Data{
+.Data {
   height: calc(100vh-8vh);
 }
-
-  
-
-
-
-
-
-
-
-
 
 .BottomBar {
   user-select: none;
@@ -142,7 +112,6 @@ html, body {
   transition: height 0.3s ease-in-out; /* Add a smooth transition for height */
 }
 
-
 .BottomBar .BottomBarButton:last-child {
   border-right: 1px solid #18191a;
 }
@@ -155,31 +124,30 @@ html, body {
   border-right: 1px solid #18191a;
 }
 
-  .HomeButton,
-  .AboutButton,
-  .ServicesButton,
-  .ContactButton,
-  .PreviousWorkButton {
-    text-align: center;
-    width: 20%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative; /* Add position: relative */
-    overflow: hidden;
-    border-left: 1px solid #18191a; /* Add left border */
-    border-right: 1px solid #18191a; /* Add right border */
-  }
-  
-  
-  .HomeButton:first-child {
-    border-left: none;
-  }
-  
-  .PreviousWorkButton:last-child {
-    border-right: none;
-  }  
+.HomeButton,
+.AboutButton,
+.ServicesButton,
+.ContactButton,
+.PreviousWorkButton {
+  text-align: center;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Add position: relative */
+  overflow: hidden;
+  border-left: 1px solid #18191a; /* Add left border */
+  border-right: 1px solid #18191a; /* Add right border */
+}
+
+.HomeButton:first-child {
+  border-left: none;
+}
+
+.PreviousWorkButton:last-child {
+  border-right: none;
+}
 
 .PreviousWorkButton:first-child,
 .HomeButton:last-child {
@@ -187,92 +155,104 @@ html, body {
   border-left: 1px solid #18191a; /* Add left border only for the first button */
 }
 
-  .HomeButton img,
-  .AboutButton img,
-  .ServicesButton img {
-    overflow: hidden;
-    max-width: 80%;
-    max-height: 80%;
-  }
-  
-  .ContactButton img {
-    overflow: hidden;
-    max-width: 30%;
-    max-height: 70%;
-  }
-  
-  .PreviousWorkButton img {
-    overflow: hidden;
-    max-width: 80%;
-    max-height: 70%;
-  }
-  
-  .HomeButton::before,
-  .AboutButton::before,
-  .ServicesButton::before,
-  .ContactButton::before,
-  .PreviousWorkButton::before {
-    content: "";
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to top, #7d1215, #c8222a);
-    opacity: 0; /* Start with opacity 0 for the transition effect */
-    transition: opacity 0.1s ease;
-    z-index: -1; /* Place the pseudo-element behind the content */
-  }
-  
-  /* Add hover styles for the pseudo-element */
-  .HomeButton:hover::before,
-  .AboutButton:hover::before,
-  .ServicesButton:hover::before,
-  .ContactButton:hover::before,
-  .PreviousWorkButton:hover::before {
-    overflow: hidden;
-    opacity: 1; /* On hover, change opacity to 1 */
-    transition: opacity 0.1s ease-out;
-  }
-  .selected {
-    background-image: linear-gradient(to top, #920f14, #db1721); /* Customize the background color for the selected state */
-    /* Add any other styles you want for the selected button here */
-  }
+.HomeButton img,
+.AboutButton img,
+.ServicesButton img {
+  overflow: hidden;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.ContactButton img {
+  overflow: hidden;
+  max-width: 30%;
+  max-height: 70%;
+}
+
+.PreviousWorkButton img {
+  overflow: hidden;
+  max-width: 80%;
+  max-height: 70%;
+}
+
+.HomeButton::before,
+.AboutButton::before,
+.ServicesButton::before,
+.ContactButton::before,
+.PreviousWorkButton::before {
+  content: "";
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, #7d1215, #c8222a);
+  opacity: 0; /* Start with opacity 0 for the transition effect */
+  transition: opacity 0.1s ease;
+  z-index: -1; /* Place the pseudo-element behind the content */
+}
+
+/* Add hover styles for the pseudo-element */
+.HomeButton:hover::before,
+.AboutButton:hover::before,
+.ServicesButton:hover::before,
+.ContactButton:hover::before,
+.PreviousWorkButton:hover::before {
+  overflow: hidden;
+  opacity: 1; /* On hover, change opacity to 1 */
+  transition: opacity 0.1s ease-out;
+}
+.selected {
+  background-image: linear-gradient(
+    to top,
+    #920f14,
+    #db1721
+  ); /* Customize the background color for the selected state */
+  /* Add any other styles you want for the selected button here */
+}
 .container {
-    display: flex;
-    height: 85vh; 
-    justify-content: space-between;
-    padding-top: 12px;
+  display: flex;
+  height: 85vh;
+  justify-content: space-between;
+  padding-top: 12px;
 }
 
 .box {
-    flex: 1;
-    padding-top: 10px;
-    padding-left: 10px;
-    border: 2px solid transparent;
-    border-color: #52080a;
-    margin: 20px;
-    background: linear-gradient(to top, rgba(47, 49, 50, 0.8), rgba(47, 49, 50, 0.2));
-    transition: border-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
-    font-family: 'Arimo', sans-serif;
-    font-size: 40px;
-    color: azure;
-    opacity: 0.7;
+  flex: 1;
+  padding-top: 10px;
+  padding-left: 10px;
+  border: 2px solid transparent;
+  border-color: #52080a;
+  margin: 20px;
+  background: linear-gradient(
+    to top,
+    rgba(47, 49, 50, 0.8),
+    rgba(47, 49, 50, 0.2)
+  );
+  transition: border-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+  font-family: "Arimo", sans-serif;
+  font-size: 40px;
+  color: azure;
+  opacity: 0.7;
 }
 
 .box:hover {
-    border-color: #920f14;
-    opacity: 1;
-    transform: scale(1.03);
-    background: linear-gradient(to top, rgba(47, 49, 50, 1), rgba(47, 49, 50, 0.4)); /* Adjust gradient on hover */
+  border-color: #920f14;
+  opacity: 1;
+  transform: scale(1.03);
+  background: linear-gradient(
+    to top,
+    rgba(47, 49, 50, 1),
+    rgba(47, 49, 50, 0.4)
+  ); /* Adjust gradient on hover */
 }
 
 .box img {
-    width: 300px;
-    height: auto;
-    margin-bottom: 10px;
-    max-width: 100%;
+  width: 300px;
+  height: auto;
+  margin-bottom: 10px;
+  max-width: 100%;
 }
 
 .header {
@@ -282,33 +262,37 @@ html, body {
 
 .subheader {
   font-size: 40px;
-  font-style: italic ;
-  opacity: .8;
+  font-style: italic;
+  opacity: 0.8;
 }
 
 .paragraph {
-  font-size: 25px; 
-  
+  font-size: 25px;
+}
+
+.card3{
+  max-width: 80%;
+  max-height: 80%;
 }
 
 @media (max-width: 768px) {
   .container {
-      flex-direction: column; 
-      padding: 12px 0; 
+    flex-direction: column;
+    padding: 12px 0;
   }
   .box {
-      margin: 10px 0; 
+    margin: 10px 0;
   }
 }
 @media (max-width: 768px) {
   .box img {
-      max-width: 80%;
+    max-width: 80%;
   }
 }
 @media (max-width: 768px) {
   .box {
-      width: 100%; 
-      margin: 20px 0; 
+    width: 100%;
+    margin: 20px 0;
   }
 }
 @media (max-width: 768px) {
@@ -324,6 +308,6 @@ html, body {
 }
 @media (max-width: 768px) {
   .paragraph {
-    font-size: 14px; 
+    font-size: 14px;
   }
 }
