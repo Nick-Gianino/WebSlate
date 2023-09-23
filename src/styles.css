@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400&family=Arimo:wght@400;500&family=Comfortaa:wght@300;400&family=Frank+Ruhl+Libre&family=Noto+Sans+Tamil:wght@300;400&family=Scada:ital,wght@1,700&family=Staatliches&family=Zen+Kaku+Gothic+New:wght@300;400;700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400&family=Arimo:wght@400;500&family=Comfortaa:wght@300;400&family=Frank+Ruhl+Libre&family=Noto+Sans+Tamil:wght@300;400&family=Scada:ital,wght@1,700&family=Staatliches&family=Zen+Kaku+Gothic+New:wght@300;400;700&family=Zilla+Slab:wght@300;400&display=swap');
 .App {
   height: 100vh;
   width: 100vw;
@@ -235,8 +234,8 @@ body {
   font-size: 40px;
   color: azure;
   opacity: 0.7;
+  overflow: hidden; /* Add this line */
 }
-
 .box:hover {
   border-color: #920f14;
   opacity: 1;
@@ -254,22 +253,25 @@ body {
   margin-bottom: 10px;
   max-width: 100%;
 }
-
+@media (min-width: 2540px) {
 .header {
   font-size: 70px;
   font-weight: bold;
 }
-
+}
+@media (min-width: 2540px) {
 .subheader {
   font-size: 40px;
   font-style: italic;
   opacity: 0.8;
 }
-
-.paragraph {
-  font-size: 40px;
 }
-
+@media (min-width: 2540px) {
+.paragraph {
+  font-size: 50px;
+  font-family: 'Zilla Slab', serif;
+}
+}
 .card3{
   max-width: 80%;
   max-height: 80%;
@@ -309,6 +311,7 @@ body {
 @media (max-width: 768px) {
   .paragraph {
     font-size: 14px;
+    padding-bottom: 20px;
   }
 }
 /* @media (min-width: 1399px) {
@@ -323,3 +326,20 @@ body {
     font-size: 40px; 
   }
 } */
+
+@media (min-width: 769px) and (max-width: 2200px) {
+  .paragraph {
+    font-size: 40px; 
+    font-family: 'Zilla Slab', serif;
+
+  }
+  .header {
+    font-size: 60px; 
+    font-weight: bold;
+  }
+  .subheader {
+    font-size: 30px;
+    font-style: italic;
+    opacity: 0.8;
+  }
+}
