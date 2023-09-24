@@ -263,6 +263,7 @@ body {
     rgba(47, 49, 50, 1),
     rgba(47, 49, 50, 0.4)
   ); /* Adjust gradient on hover */
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.15); /* Add a red glow effect */
 }
 
 .box img {
@@ -341,20 +342,28 @@ body {
     padding-bottom: 20px;
   }
 }
-/* @media (min-width: 1399px) {
+
+@media (min-width: 769px) and (max-width: 1918px) {
+  .paragraph {
+    font-size: 20px; 
+    font-family: 'Zen Maru Gothic', sans-serif;
+
+  }
   .header {
-    font-size: 90px; 
+    font-size: 35px; 
     font-weight: bold;
   }
   .subheader {
-    font-size: 60px; 
+    font-size: 25px;
+    font-style: italic;
+    opacity: 0.6;
   }
-  .paragraph {
-    font-size: 40px; 
+  .box img {
+    max-width: 40%;
   }
-} */
 
-@media (min-width: 769px) and (max-width: 2200px) {
+}
+@media (min-width: 1920px) and (max-width: 2539px) {
   .paragraph {
     font-size: 40px; 
     font-family: 'Zen Maru Gothic', sans-serif;
@@ -369,4 +378,10 @@ body {
     font-style: italic;
     opacity: 0.6;
   }
+}
+.paragraphAU{
+  font-size: 40px;
+  color: azure;
+  opacity: 0.7;
+  overflow: hidden;
 }
