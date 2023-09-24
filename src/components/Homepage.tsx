@@ -13,15 +13,17 @@ const LoggedInHomePage = () => {
         <div className="container">
             {boxes.map((box, index) => (
                 <div className="box" key={index}>
-                    <img
-                        src={box.imageSrc}
-                        alt={`Image for Box ${index + 1}`}
-                        className="boximg"
-                        style={index === 2 ? { width: '225px', height: '310px', paddingLeft: '10px', paddingTop: '10px',} : index === 1 ? {paddingTop: '10px', paddingLeft: '' } : index === 0 ? {paddingLeft:'10px', paddingTop: ''} : {}} 
-                    />
-                    <div className="header" style={{ padding: '0 5px' }}>{box.content}</div>
-                    <div className="subheader" style={{ padding: '0 20px', marginBottom: '5px', paddingTop: "8px" }}>{box.text}</div>
-                    <p className="paragraph" style={{ padding: '0 10px', margin: '0', paddingTop: '15px' }}>{box.subheader}</p>
+                    <div className="box-image-container"> {/* Add this div */}
+                        <img
+                            src={box.imageSrc}
+                            alt={`Image for Box ${index + 1}`}
+                            className="box-img"
+                            style={index === 2 ? { width: '38%', height: 'auto', paddingTop: '30px', } : index === 1 ? {width: '55%', height: 'auto', paddingTop: '10px', paddingLeft: '' } : index === 0 ? {width: '53%', height: 'auto', paddingLeft: '10px', paddingTop: '' } : {}}
+                        />
+                    </div>
+                    <div className="header" style={{ padding: '0 5px', paddingTop:'20px', marginLeft: '25px' }}>{box.content}</div>
+                    <div className="subheader" style={{ padding: '0 20px', marginBottom: '5px', paddingTop: "12px", marginLeft: '50px' }}>{box.text}</div>
+                    <p className="paragraph" style={{ padding: '0 10px', margin: '5px', paddingTop: '5px' }}>{box.subheader}</p>
                 </div>
             ))}
         </div>
