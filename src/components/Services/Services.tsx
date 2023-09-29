@@ -14,6 +14,7 @@ const Services = () => {
             <h3 style={{ fontSize: "30px" }}>
               WebSlate Development and Design
             </h3>
+            <div className="image-container">
             <img
               src="test.png"
               alt="WebSlate Development and Design"
@@ -24,6 +25,7 @@ const Services = () => {
                 float: "right",
               }}
             />
+            </div>
           </div>
           <p style={{marginLeft: "10px"
               }}>
@@ -51,6 +53,7 @@ const Services = () => {
         <div className="service-content">
           <div className="service-subheader">
             <h3>Our Approach</h3>
+            <div className="image-container">
             <img
               src="icons-01.png"
               alt="Our Approach"
@@ -61,6 +64,7 @@ const Services = () => {
                 float: "right",
               }}
             />
+            </div>
           </div>
           <ul className="bulletpoints">
             <li>
@@ -86,6 +90,7 @@ const Services = () => {
         <div className="service-content">
           <div className="service-subheader">
             <h3>Hosted with Confidence</h3>
+            <div className="image-container">
             <img
               src="hosticon-01.png"
               alt="Hosted with Confidence"
@@ -94,8 +99,11 @@ const Services = () => {
                 width: "250px",
                 height: "250px",
                 float: "right",
+                
               }}
+              
             />
+            </div>
           </div>
           <ul className="bulletpoints">
             <li>
