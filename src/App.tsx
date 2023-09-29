@@ -66,7 +66,7 @@ const App: React.FC = () => {
       <TopBar setSelectedComponent={setSelectedComponent} setSelectedButton={setSelectedButton} />
 
       <div className = "Data">
-        {selectedComponent === 0 && (user ? <UserDashboard /> : <Homepage />)}
+        {selectedComponent === 0 && (user ? <UserDashboard /> : <Homepage setSelectedComponent={setSelectedComponent} />)}
         {selectedComponent === 1 && <AboutUs />}
         {selectedComponent === 2 && <Services />}
         {selectedComponent === 3 && <ContactUs />}
