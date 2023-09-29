@@ -29,6 +29,8 @@ const LoginButton: React.FC<LogoProps> = ({ setSelectedComponent, setSelectedBut
     const handleSignOut = () => {
       signOut(auth).then(() => {
         console.log("User signed out");
+          setSelectedComponent(0); 
+          setSelectedButton(0);
       }).catch((error) => {
         console.error("Error signing out: ", error);
       });
@@ -38,8 +40,6 @@ const LoginButton: React.FC<LogoProps> = ({ setSelectedComponent, setSelectedBut
       const unsubscribe = onAuthStateChanged(auth, user => {
         setUser(user);
       });
-      
-      // window.self.close()
       return () => unsubscribe();
     }, [auth]);
 
@@ -51,7 +51,7 @@ const LoginButton: React.FC<LogoProps> = ({ setSelectedComponent, setSelectedBut
         onClick={handleSignOut}
       >
         <img
-          src="signout_nobg_text.png" // Replace with your logout icon
+          src="signout_nobg_text.png" 
           alt="logout icon"
         />
       </ButtonBase>
