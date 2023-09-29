@@ -1,9 +1,18 @@
 import React from 'react';
 
-const UserDashboard = () => {
+const UserDashboard: React.FC = () => {
     return (
-        <div>
-            <p>WHOAH</p>
+        <div className="services-container">
+            <div className="service-section">
+                <div className="service-header">
+                    <h2>WHOAH</h2>
+                </div>
+            </div>
+            <div className="service-section">
+                <div className="service-content">
+                    {/* Content goes here */}
+                </div>
+            </div>
         </div>
     );
 };
