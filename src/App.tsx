@@ -4,7 +4,7 @@ import TopBar from './components/TopBar/TopBar';
 import BottomBar from './components/BottomBar';
 import Homepage from './components/Homepage';
 import AboutUs from './components/AboutUs';
-import ContactUs from './components/ContactUs';
+import ContactUs from './components/ContactUs/ContactUs';
 import Services from './components/Services';
 import PreviousWork from './components/PreviousWork';
 import UserDashboard from './components/UserDashboard';
@@ -28,6 +28,7 @@ const App: React.FC = () => {
     appId: process.env.REACT_APP_FIREBASE_APP_ID,
     measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
   };
+
   initializeApp(firebaseConfig);
   // const analytics = getAnalytics(app);
 
@@ -50,7 +51,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="App">
+    <div className="8-vw vw-[200px] overflow:hidden">
 
       <TopBar setSelectedComponent={setSelectedComponent} setSelectedButton={setSelectedButton} />
 
