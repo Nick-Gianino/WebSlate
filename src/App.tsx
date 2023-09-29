@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './styles.css';
+import './styles.css'; 
 import TopBar from './components/TopBar/TopBar';
 import BottomBar from './components/BottomBar/BottomBar';
 import Homepage from './components/HomePage/Homepage';
@@ -61,7 +61,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="8-vw vw-[200px] overflow:hidden">
+    <div className="App">
 
       <TopBar setSelectedComponent={setSelectedComponent} setSelectedButton={setSelectedButton} />
 
