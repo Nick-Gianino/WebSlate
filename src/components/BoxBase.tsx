@@ -15,8 +15,8 @@ const BoxBase: React.FC<BoxProps> = ({ content, text, subheader, imageSrc, index
       <div className="box-image-container">
         <img
           src={imageSrc}
-          alt={`Image for Box ${index + 1}`}
-          className="box-img"
+          alt={`This is the context for Box ${index + 1}`}
+          className="box-context"
           style={index === 2 ? { width: '38%', height: 'auto', paddingTop: '30px', } : index === 1 ? {width: '55%', height: 'auto', paddingTop: '10px', paddingLeft: '' } : index === 0 ? {width: '53%', height: 'auto', paddingLeft: '10px', paddingTop: '' } : {}}
         />
       </div>

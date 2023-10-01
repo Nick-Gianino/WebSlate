@@ -243,7 +243,7 @@ body {
   flex-direction: column;
 }
 
-.box-img {
+.box-context {
   width: 100%; /* Adjust the width as needed */
   height: auto;
   max-width: 100%;
