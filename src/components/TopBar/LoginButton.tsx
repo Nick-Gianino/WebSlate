@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ButtonBase from '../ButtonBase';
+import ButtonBase from '../Bases/ButtonBase';
 import '../../styles.css';
 import { getAuth, signInWithPopup, GoogleAuthProvider, User, signOut, onAuthStateChanged } from "firebase/auth";
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonBase from '../ButtonBase';
+import ButtonBase from '../Bases/ButtonBase';
 
 interface Props {
   selectComponent: (index: number) => void;

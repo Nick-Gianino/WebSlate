@@ -1,5 +1,5 @@
 import React from 'react';
-import BoxBase from '../BoxBase';
+import BoxBase from '../Bases/BoxBase';
 import '../../styles.css';
 
 interface Props {
