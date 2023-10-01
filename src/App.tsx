@@ -38,8 +38,8 @@ const App = () => {
       const unsubscribe = onAuthStateChanged(auth, user => {
         setUser(user);
         if(user) {
-          setSelectedComponent(5);
-          setSelectedButton(5);
+          setSelectedComponent(4);
+          setSelectedButton(4);
         }
       });
   
