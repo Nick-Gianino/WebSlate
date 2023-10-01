@@ -28,6 +28,7 @@ const App = () => {
       measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
     };
   
+   
     
     initializeApp(firebaseConfig);
     // const analytics = getAnalytics(app);
