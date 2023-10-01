@@ -18,8 +18,8 @@ const LoginButton: React.FC<LogoProps> = ({ setSelectedComponent, setSelectedBut
         const result = await signInWithPopup(auth, provider);
         const user = result.user;
         if(user){
-          setSelectedComponent(5); 
-          setSelectedButton(5);
+          setSelectedComponent(4); 
+          setSelectedButton(4);
         }
     } catch (error) {
         console.log(error);

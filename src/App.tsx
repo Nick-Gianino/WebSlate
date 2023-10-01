@@ -56,12 +56,11 @@ const App = () => {
         <TopBar setSelectedComponent={setSelectedComponent} setSelectedButton={setSelectedButton} />
   
         <div className = "Data">
-          {selectedComponent === 0 && (user ? <UserDashboard /> : <Homepage setSelectedComponent={setSelectedComponent} />)}
+          {selectedComponent === 0 && (<Homepage setSelectedComponent={setSelectedComponent} setSelectedButton={setSelectedButton} />)}
           {selectedComponent === 1 && <AboutUs />}
           {selectedComponent === 2 && <Services />}
           {selectedComponent === 3 && <ContactUs />}
           {selectedComponent === 4 && <UserDashboard />}
-          {selectedComponent === 5 && <UserDashboard />}
         </div>
   
         <div className = "BottomBar">
