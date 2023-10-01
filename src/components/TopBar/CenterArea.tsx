@@ -1,21 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { getAuth, onAuthStateChanged, User } from 'firebase/auth';
+import React from 'react';
 
-const CenterArea: React.FC = () => {
-  const [user, setUser] = useState<User | null>(null);
-  const auth = getAuth();
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, user => {
-      setUser(user);
-    });
-
-    return () => unsubscribe();
-  }, [auth]);
-
+const CenterArea = () => {
+ 
   return (
     <div className='centerarea'  >
-        {user ? <p>Hello, {user.displayName}</p> : <p>Please Sign in</p>}
+      <p style={{ fontSize: '50pt' }}>Webslate</p>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../styles.css'
 
-const AboutUs: React.FC = () => {
+const AboutUs = () => {
     return (
         <div className="services-container">
             <div className="service-section">
