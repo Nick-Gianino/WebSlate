@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getAuth, onAuthStateChanged, User } from 'firebase/auth';
 
-const CenterArea: React.FC = () => {
+const CenterArea = () => {
   const [user, setUser] = useState<User | null>(null);
   const auth = getAuth();
 

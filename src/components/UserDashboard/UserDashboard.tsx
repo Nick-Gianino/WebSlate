@@ -1,6 +1,4 @@
-import React from 'react';
-
-const UserDashboard: React.FC = () => {
+const UserDashboard = () => {
     return (
         <div className="services-container">
             <div className="service-section">
