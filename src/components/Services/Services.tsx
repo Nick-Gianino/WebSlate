@@ -4,29 +4,32 @@ import ServiceContent from './ServiceContent';
 const Services: React.FC = () => {
   return (
     <>
-      <div className="service-box">
-        <h2>Service</h2>
+      <div className="service-title">
+        <h2>Our Service</h2>
       </div>
       <div className="services-wrapper">
         
-        <div className="services-container" id="box1">
+        <div className="services-container" id="box1"  >
           <ServiceContent
             title="Our Approach"
             imageSrc="icons-01.png"
             imageAlt="Our Approach"
             points={[
+             
               "Responsive Design: Ensuring your website looks stunning and functions seamlessly on all devices, from desktop to mobile.",
               "Interactivity: Creating a smooth and interactive experience for users across various platforms.",
               "Modern Aesthetics: Delivering clean, modern, and visually captivating designs.",
               "Customer-Centric: Tailoring designs to your target audience to maximize engagement.",
+              
             ]}
+            paragraph="See how we'll craft your business' webspace."
           />
         </div>
         <div className="services-container" id="box2">
           <ServiceContent
-            title="WebSlate Development and Design"
+            title="WebSlate Design"
             imageSrc="slatewebsitelogo3.png"
-            imageAlt="WebSlate Development and Design"
+            imageAlt="WebSlate Design"
             points={[
               "Graphic Design Excellence: Logos, branding, and company voice tailored to your unique identity.",
               "Website Development Expertise: Building and enhancing your business website and online space.",

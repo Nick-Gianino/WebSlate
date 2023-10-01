@@ -23,10 +23,7 @@ const ServiceContent: React.FC<ServiceContentProps> = ({
             src={imageSrc}
             alt={imageAlt}
             style={{
-              display: "block",
-              margin: "0 auto", // Center the image horizontally
-              width: "auto",
-              height: "250px",
+
             }}
           />
         </div>
