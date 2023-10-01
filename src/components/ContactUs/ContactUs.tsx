@@ -11,45 +11,10 @@ const ContactUs = () => {
         console.log(name, email, message);
     };
     return (
-<<<<<<< HEAD
-        <div className="contact-container">
-            <div className="contact-section">
-                <div className="contact-header">
-                    <h2>Contact Us</h2>
-                </div>
-            </div>
-            <div className="contact-section">
-                <div className="contact-content">
-                    <form onSubmit={handleSubmit}>
-                        <input 
-                            type="text" 
-                            placeholder="Your name" 
-                            value={name} 
-                            onChange={(e) => setName(e.target.value)} 
-                            required 
-                        />
-                        <input 
-                            type="email" 
-                            placeholder="Email" 
-                            value={email} 
-                            onChange={(e) => setEmail(e.target.value)} 
-                            required 
-                        />
-                        <textarea 
-                            placeholder="Your message" 
-                            value={message} 
-                            onChange={(e) => setMessage(e.target.value)} 
-                            required 
-                        />
-                        <button type="submit">Submit</button>
-                    </form>
-                </div>
-=======
         <div className="services-container">
         <div className="service-section">
             <div className="service-header">
                 <h2>Contact Us</h2>
->>>>>>> cd08d6f28851ae262b94e2c1204724581e6214f6
             </div>
         </div>
         <div className="service-section">
