@@ -21,8 +21,8 @@ const Logo: React.FC<LogoProps> = ({ setSelectedComponent, setSelectedButton }) 
 
   const handleLogoClick = () => {
     if (isUserLoggedIn) {
-      setSelectedComponent(5); // If logged in, set state to 5
-      setSelectedButton(5);
+      setSelectedComponent(4); // If logged in, set state to 5
+      setSelectedButton(4);
     } else {
       setSelectedComponent(0); // If not logged in, set state to 0
       setSelectedButton(0);
