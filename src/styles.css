@@ -394,6 +394,83 @@ body {
 
 
 .services-container {
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.15);
+  padding-top: 10px;
+  padding-left: 10px;
+  border: 2px solid transparent;
+  border-color: #52080a;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 0px;
+  margin-right: 20px;
+  background: linear-gradient(
+    to top,
+    rgba(47, 49, 50, 0.8),
+    rgba(47, 49, 50, 0.2)
+  );
+  transition: border-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+  font-family: "Arimo", sans-serif;
+  font-size: 20px;
+  color: azure;
+  opacity: 0.7;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-width: 32%;
+}
+.services-wrapper {
+  display: flex;
+  justify-content: space-between; /* Adjust as needed for spacing between boxes */
+}
+.service-header {
+  padding: 15px;
+  background-color: transparent;
+  border-bottom: 1px solid #52080a;
+  font-size: 25px;
+}
+
+.service-subheader {
+  padding: 2px 15px;
+  background-color: transparent;
+  font-size: 24px;
+}
+
+.service-content {
+  padding: 15px;
+  background-color: transparent;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.service-content p {
+  margin: 0;
+}
+
+.contact-header {
+  padding: 15px;
+  background-color: transparent;
+  border-bottom: 1px solid #52080a; 
+  margin-left: 20px;
+  font-size: 25px;
+}
+
+.contact-subheader {
+  padding: 2px 15px;
+  background-color: transparent;
+  font-size: 24px; 
+}
+
+.contact-content {
+  padding: 15px;
+  background-color: transparent;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.contact-content p {
+  margin: 0;
+}
+.contact-container {
   box-shadow: 0 0 45px rgba(255, 0, 0, 0.15);
   flex: 1;
   padding-top: 10px;
@@ -417,33 +494,8 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+ 
 }
-
-.service-header {
-  padding: 15px;
-  background-color: transparent;
-  border-bottom: 1px solid #52080a; 
-  margin-left: 20px;
-  font-size: 25px;
-}
-
-.service-subheader {
-  padding: 2px 15px;
-  background-color: transparent;
-  font-size: 24px; 
-}
-
-.service-content {
-  padding: 15px;
-  background-color: transparent;
-  margin-left: 3%;
-  margin-right: 3%;
-}
-
-.service-content p {
-  margin: 0;
-}
-
 .bulletpoints {
   list-style-type: disc;
   padding-left: 20px;
@@ -455,4 +507,10 @@ body {
 .service-section{
   margin-left: 2%;
   margin-right: 2%;
+}
+.service-content img {
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
+  max-width: 100%; /* Set the maximum width to prevent squishing */
+  max-height: 100%; /* Set the maximum height to prevent squishing */
 }

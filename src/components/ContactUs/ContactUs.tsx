@@ -12,14 +12,14 @@ const ContactUs: React.FC = () => {
     };
 
     return (
-        <div className="services-container">
-            <div className="service-section">
-                <div className="service-header">
+        <div className="contact-container">
+            <div className="contact-section">
+                <div className="contact-header">
                     <h2>Contact Us</h2>
                 </div>
             </div>
-            <div className="service-section">
-                <div className="service-content">
+            <div className="contact-section">
+                <div className="contact-content">
                     <form onSubmit={handleSubmit}>
                         <input 
                             type="text" 

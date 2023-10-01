@@ -1,131 +1,108 @@
 import React from "react";
 
-const Services = () => {
+// Define the types for your props
+interface ServiceHeaderProps {
+  title: string;
+}
+
+const ServiceHeader: React.FC<ServiceHeaderProps> = ({ title }) => {
   return (
-    <div className="services-container">
+    <div className="service-header">
+      <h2>{title}</h2>
+    </div>
+  );
+};
+
+interface ServiceContentProps {
+  title: string;
+  imageSrc: string;
+  imageAlt: string;
+  points: string[];
+  paragraph?: string;
+}
+
+const ServiceContent: React.FC<ServiceContentProps> = ({
+  title,
+  imageSrc,
+  imageAlt,
+  points,
+  paragraph,
+}) => {
+  return (
+    <div className="service-box">
       <div className="service-section">
-        <div className="service-header">
-          <h2>Services</h2>
+        <div className="image-container">
+          <img
+            src={imageSrc}
+            alt={imageAlt}
+            style={{
+              display: "block",
+              margin: "0 auto", // Center the image horizontally
+              width: "auto",
+              height: "250px",
+            }}
+          />
         </div>
-      </div>
-      <div className="service-section">
         <div className="service-content">
           <div className="service-subheader">
-            <h3 style={{ fontSize: "30px" }}>
-              WebSlate Development and Design
-            </h3>
-            <div className="image-container">
-            <img
-              src="test.png"
-              alt="WebSlate Development and Design"
-              style={{
-                marginRight: "10%",
-                width: "250px",
-                height: "250px",
-                float: "right",
-              }}
-            />
-            </div>
+            <h3>{title}</h3>
           </div>
-          <p style={{marginLeft: "10px"
-              }}>
-            At WebSlate, we specialize in crafting your business's online
-            presence. Our comprehensive services encompass:
-          </p>
-          <ol className="numbered-list">
-            <li>
-              <h4>Graphic Design Excellence:</h4>
-              <p>
-                Logos, branding, and company voice tailored to your unique
-                identity.
-              </p>
-            </li>
-            <li>
-              <h4>Website Development Expertise:</h4>
-              <p>
-                Building and enhancing your business website and online space.
-              </p>
-            </li>
-          </ol>
+          {paragraph && <p>{paragraph}</p>}
+          {points && (
+            <ul className="bulletpoints">
+              {points.map((point, index) => (
+                <li key={index}>{point}</li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
-      <div className="service-section">
-        <div className="service-content">
-          <div className="service-subheader">
-            <h3>Our Approach</h3>
-            <div className="image-container">
-            <img
-              src="icons-01.png"
-              alt="Our Approach"
-              style={{
-                marginRight: "10%",
-                width: "250px",
-                height: "250px",
-                float: "right",
-              }}
-            />
-            </div>
-          </div>
-          <ul className="bulletpoints">
-            <li>
-              Responsive Design: Ensuring your website looks stunning and
-              functions seamlessly on all devices, from desktop to mobile.
-            </li>
-            <li>
-              Interactivity: Creating a smooth and interactive experience for
-              users across various platforms.
-            </li>
-            <li>
-              Modern Aesthetics: Delivering clean, modern, and visually
-              captivating designs.
-            </li>
-            <li>
-              Customer-Centric: Tailoring designs to your target audience to
-              maximize engagement.
-            </li>
-          </ul>
-        </div>
+    </div>
+  );
+};
+
+const Services: React.FC = () => {
+  return (
+    <div className="services-wrapper">
+      <div className="services-container" id="box1">
+        <ServiceContent
+          title="Our Approach"
+          imageSrc="icons-01.png"
+          imageAlt="Our Approach"
+          points={[
+            "Responsive Design: Ensuring your website looks stunning and functions seamlessly on all devices, from desktop to mobile.",
+            "Interactivity: Creating a smooth and interactive experience for users across various platforms.",
+            "Modern Aesthetics: Delivering clean, modern, and visually captivating designs.",
+            "Customer-Centric: Tailoring designs to your target audience to maximize engagement.",
+          ]}
+        />
       </div>
-      <div className="service-section">
-        <div className="service-content">
-          <div className="service-subheader">
-            <h3>Hosted with Confidence</h3>
-            <div className="image-container">
-            <img
-              src="hosticon-01.png"
-              alt="Hosted with Confidence"
-              style={{
-                marginRight: "10%",
-                width: "250px",
-                height: "250px",
-                float: "right",
-                
-              }}
-              
-            />
-            </div>
-          </div>
-          <ul className="bulletpoints">
-            <li>
-              Dependable Uptime: Ensuring your website is accessible 24/7.
-            </li>
-            <li>
-              Google AdSense Integration: Monetize your site with targeted ads.
-            </li>
-            <li>
-              Comprehensive Analytics: Gain valuable insights into your online
-              performance.
-            </li>
-            <li>
-              Ongoing Support: Count on WebSlate's continued assistance and
-              guidance.
-            </li>
-          </ul>
-          <p style={{ clear: "both" }}>
-            Elevate your online presence with WebSlate. Let's bring your vision
-            to life.
-          </p>
-        </div>
+      <div className="services-container" id="box2">
+        <ServiceContent
+          title="WebSlate Development and Design"
+          imageSrc="slatewebsitelogo3.png"
+          imageAlt="WebSlate Development and Design"
+          points={[
+            "Graphic Design Excellence: Logos, branding, and company voice tailored to your unique identity.",
+            "Website Development Expertise: Building and enhancing your business website and online space.",
+            "Hosting: Secure and reliable webservice."
+          ]}
+          paragraph="At WebSlate, we specialize in crafting your business's online presence. Our comprehensive services encompass:"
+        />
+      </div>
+      <div className="services-container" id="box3">
+        <ServiceContent
+          title="Hosted with Confidence"
+          imageSrc="hosticon-01.png"
+          imageAlt="Hosted with Confidence"
+          points={[
+            "Dependable Uptime: Ensuring your website is accessible 24/7.",
+            "Google AdSense Integration: Monetize your site with targeted ads.",
+            "Comprehensive Analytics: Gain valuable insights into your online performance.",
+            "Ongoing Support: Count on WebSlate's continued assistance and guidance.",
+          ]}
+          paragraph="Elevate your online presence with WebSlate. Let's bring your vision to life."
+        />
       </div>
     </div>
   );
