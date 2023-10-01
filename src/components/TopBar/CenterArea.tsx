@@ -15,7 +15,7 @@ const CenterArea: React.FC = () => {
 
   return (
     <div className='centerarea'  >
-        {user ? <p>Hello, {user.displayName}</p> : <p>Please Sign in</p>}
+        {user ? <p>Hello, {user.displayName}</p> : <p style={{ fontSize: '50pt' }}>Welcome To Webslate!</p>}
     </div>
   );
 };
