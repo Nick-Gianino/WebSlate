@@ -4,6 +4,9 @@ import ServiceContent from './ServiceContent';
 const Services: React.FC = () => {
   return (
     <div className="services-wrapper">
+      <div className="service-box">
+        <h2>Service</h2>
+      </div>
       <div className="services-container" id="box1">
         <ServiceContent
           title="Our Approach"
