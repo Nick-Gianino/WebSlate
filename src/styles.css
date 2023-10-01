@@ -50,9 +50,10 @@ body {
   overflow: hidden;
 }
 .LoginButton {
-  overflow: hidden;
-  text-align: right;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  overflow: hidden;
   margin: 0 auto;
   border-left: 1.5px solid #18191a;
   background-image: linear-gradient(to top, #7d1215, #c8222a);
@@ -62,11 +63,7 @@ body {
   max-width: 9vw;
   max-height: 100vh;
   object-fit: contain;
-  transform: scale(.9) translateX(-1vw) translateY(-1vh);
-  padding-top: 11%;
-  padding-bottom: 6%;
-  padding-right: 16%;
-  padding-left: 8%;
+  transform: scale(.9);
 }
 
 .LogoutButton {
