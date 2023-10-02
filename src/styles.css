@@ -612,15 +612,7 @@ body {
     margin-bottom: 15px;
     
   }
-  .contact-container {
-    background-image: url('../public/slatewebsitelogo3.png');
-    background-size: 20%; 
-    background-repeat: no-repeat; 
-    background-position: center center; 
-    background-position: right 92%;
-    padding-top: 1vh;
-    
-  }
+
   }
 
 @media (max-width: 2559px) {
@@ -628,7 +620,14 @@ body {
     background-color: #040405;
     padding: 40px;
   }
-
+  .contact-container {
+    background-image: url('../public/slatewebsitelogo3.png');
+    background-size: 25%; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    background-position: right 65%;
+    padding-top: 1vh;
+  }
   .contact-container {
     max-width: 95%;
     border: 2px solid transparent;
@@ -684,7 +683,7 @@ body {
   }
 
   .contact-form button {
-    background-color: #c8222a;
+    background-image: linear-gradient(to top, #7d1215, #c8222a);
     color: #fff;
     border: none;
     padding: 12px 20px;
@@ -763,7 +762,7 @@ body {
   background-size: 20%; 
   background-repeat: no-repeat; 
   background-position: center center; 
-  background-position: right 92%;
+  background-position: right 73%;
   padding-top: 1vh;
   
 }
@@ -779,7 +778,7 @@ body {
   }
   
   .contact-form button {
-    background-color: #c8222a; 
+    background-image: linear-gradient(to top, #7d1215, #c8222a);
     color: #fff;
     border: none;
     padding: 12px 20px;
@@ -798,15 +797,6 @@ body {
   .contact-form input,
 .contact-form textarea {
   margin-bottom: 10px; 
-  
-}
-.contact-container {
-  background-image: url('../public/slatewebsitelogo3.png');
-  background-size: 20%; 
-  background-repeat: no-repeat; 
-  background-position: center center; 
-  background-position: right 92%;
-  padding-top: 1vh;
   
 }
   .centerarea{
