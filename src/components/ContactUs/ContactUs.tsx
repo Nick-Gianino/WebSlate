@@ -25,10 +25,14 @@ const ContactUs = () => {
 
   return (
     <>
+    <div className="contact-background">
     <div>
+    <div className='contact-container'>
+      <div className="contact-text">
       <h1>Contact us</h1>
       <p>Send a message and we will get back to you within 24 hours.</p>
-      <div className='services-container'>
+      </div>
+      
       <form className="contact-form" onSubmit={submitForm}>
         <label>Name</label><br />
         <input 
@@ -58,6 +62,7 @@ const ContactUs = () => {
         <button type="submit">Submit</button>
       </form>
       </div>
+    </div>
     </div>
     </>
   );
