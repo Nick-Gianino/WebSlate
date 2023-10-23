@@ -618,15 +618,16 @@ body {
 @media (max-width: 2559px) {
   .contact-background {
     background-color: #040405;
-    padding: 40px;
+    padding: 10px;
   }
   .contact-container {
+  
     background-image: url('../public/slatewebsitelogo3.png');
     background-size: 25%; 
     background-repeat: no-repeat; 
     background-position: center center; 
     background-position: right 65%;
-    padding-top: 1vh;
+
   }
   .contact-container {
     max-width: 95%;
@@ -641,9 +642,9 @@ body {
   }
 
   .contact-text {
-    margin-bottom: 20px;
+
     border-bottom: 2px solid transparent;
-    padding-bottom: 20px;
+
     border-color: #52080a;
   }
 
@@ -659,7 +660,7 @@ body {
 
   .contact-form label {
     display: block;
-    margin-bottom: 8px;
+   
     color: #fff;
     font-size: 16px;
   }
@@ -772,7 +773,7 @@ body {
 .contact-form{
   padding-right: 20px;
   margin-left: 5px;
-  padding-top: 50px;
+  padding-top: 20px;
 }
   
   .contact-form textarea {
